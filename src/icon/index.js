@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import Icon from "@mui/material/Icon";
 import CircularProgress from "@mui/material/CircularProgress";
-import Tooltip from "../tooltip";
 
 const defColor = [
   "action",
@@ -48,15 +47,7 @@ const Default = (props) => {
     </Icon>
   );
 
-  const component = help ? (
-    <Tooltip help={help} timeout={timeout} enterDelay={enterDelay}>
-      {icon}
-    </Tooltip>
-  ) : (
-    icon
-  );
-
-  return component;
+  return icon;
 };
 
 Default.propTypes = {

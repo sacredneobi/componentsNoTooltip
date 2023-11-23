@@ -5,7 +5,6 @@ import Skeleton from "@mui/material/Skeleton";
 import Typography from "@mui/material/Typography";
 
 import Box from "../box";
-import Tooltip from "../tooltip";
 import { alpha } from "@mui/material/styles";
 
 const Default = (props) => {
@@ -99,11 +98,7 @@ const Default = (props) => {
     return checkRender() ? item : <Box {...other}></Box>;
   }
 
-  return (
-    <Tooltip help={help} timeout={timeout} enterDelay={enterDelay}>
-      {item}
-    </Tooltip>
-  );
+  return item;
 };
 
 Default.propTypes = {

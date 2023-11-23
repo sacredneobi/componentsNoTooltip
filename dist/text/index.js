@@ -9,7 +9,6 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 var _Skeleton = _interopRequireDefault(require("@mui/material/Skeleton"));
 var _Typography = _interopRequireDefault(require("@mui/material/Typography"));
 var _box = _interopRequireDefault(require("../box"));
-var _tooltip = _interopRequireDefault(require("../tooltip"));
 var _styles = require("@mui/material/styles");
 var _excluded = ["caption", "checkRender", "loading", "sx", "children", "color", "help", "navigation", "allowSelect", "noWrap", "onClick", "bold", "timeout", "enterDelay", "fontSize", "fw", "fs", "lh", "center", "cross", "crossColor"];
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -93,11 +92,7 @@ var Default = function Default(props) {
   if (typeof checkRender === "function") {
     return checkRender() ? item : /*#__PURE__*/_react["default"].createElement(_box["default"], other);
   }
-  return /*#__PURE__*/_react["default"].createElement(_tooltip["default"], {
-    help: help,
-    timeout: timeout,
-    enterDelay: enterDelay
-  }, item);
+  return item;
 };
 Default.propTypes = {
   caption: _propTypes["default"].oneOfType([_propTypes["default"].object, _propTypes["default"].string]).isRequired,

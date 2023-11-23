@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import Icon from "../icon";
 import Text from "../text";
 import Box from "../box";
-import Tooltip from "../tooltip";
 
 const MyButton = (props) => {
   const {
@@ -106,17 +105,7 @@ const MyButton = (props) => {
     return component;
   }
 
-  return (
-    <Tooltip
-      help={help}
-      timeout={timeout}
-      enterDelay={enterDelay}
-      placement={placement}
-      leaveDelay={leaveDelay}
-    >
-      {component}
-    </Tooltip>
-  );
+  return component;
 };
 
 const Default = (props) => {

@@ -45,17 +45,10 @@ Object.defineProperty(exports, "Text", {
     return _text["default"];
   }
 });
-Object.defineProperty(exports, "Tooltip", {
-  enumerable: true,
-  get: function get() {
-    return _tooltip["default"];
-  }
-});
 var _button = _interopRequireDefault(require("./button"));
 var _box = _interopRequireDefault(require("./box"));
 var _text = _interopRequireDefault(require("./text"));
 var _icon = _interopRequireDefault(require("./icon"));
-var _tooltip = _interopRequireDefault(require("./tooltip"));
 var _skeleton = _interopRequireDefault(require("./skeleton"));
 var _divider = _interopRequireDefault(require("./divider"));
 var _cssBaseLine = _interopRequireDefault(require("./cssBaseLine"));

@@ -10,7 +10,6 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 var _icon = _interopRequireDefault(require("../icon"));
 var _text = _interopRequireDefault(require("../text"));
 var _box = _interopRequireDefault(require("../box"));
-var _tooltip = _interopRequireDefault(require("../tooltip"));
 var _excluded = ["textIcon", "caption", "children", "sxIcon", "sxText", "navigation", "onClick", "timeout", "enterDelay", "sx", "loading", "size", "help", "iconPos", "classNameIcon", "sizeButton", "withOutAnimate", "placement", "leaveDelay", "onNavigate"];
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -93,13 +92,7 @@ var MyButton = function MyButton(props) {
   if (!help || loading) {
     return component;
   }
-  return /*#__PURE__*/_react["default"].createElement(_tooltip["default"], {
-    help: help,
-    timeout: timeout,
-    enterDelay: enterDelay,
-    placement: placement,
-    leaveDelay: leaveDelay
-  }, component);
+  return component;
 };
 var Default = function Default(props) {
   return /*#__PURE__*/_react["default"].createElement(MyButton, props);
