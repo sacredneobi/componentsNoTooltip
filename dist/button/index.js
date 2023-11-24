@@ -10,7 +10,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 var _icon = _interopRequireDefault(require("../icon"));
 var _text = _interopRequireDefault(require("../text"));
 var _box = _interopRequireDefault(require("../box"));
-var _excluded = ["textIcon", "caption", "children", "sxIcon", "sxText", "navigation", "onClick", "timeout", "enterDelay", "sx", "loading", "size", "help", "iconPos", "classNameIcon", "sizeButton", "withOutAnimate", "placement", "leaveDelay", "onNavigate"];
+var _excluded = ["textIcon", "caption", "children", "sxIcon", "sxText", "navigation", "onClick", "timeout", "enterDelay", "sx", "loading", "size", "help", "iconPos", "classNameIcon", "sizeButton", "placement", "leaveDelay", "onNavigate"];
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
@@ -35,7 +35,6 @@ var MyButton = function MyButton(props) {
     iconPos = props.iconPos,
     classNameIcon = props.classNameIcon,
     sizeButton = props.sizeButton,
-    withOutAnimate = props.withOutAnimate,
     placement = props.placement,
     leaveDelay = props.leaveDelay,
     onNavigate = props.onNavigate,
@@ -43,7 +42,6 @@ var MyButton = function MyButton(props) {
   var icon = textIcon ? /*#__PURE__*/_react["default"].createElement(_icon["default"], {
     textIcon: textIcon,
     size: size,
-    withOutAnimate: withOutAnimate,
     sx: _objectSpread({
       mr: caption && caption !== "" && iconPos === "left" && 1,
       ml: caption && caption !== "" && iconPos === "right" && 1,
@@ -80,7 +78,6 @@ var MyButton = function MyButton(props) {
     loading: loading,
     textIcon: "",
     size: size,
-    withOutAnimate: withOutAnimate,
     sx: _objectSpread({
       mr: caption && caption !== "" && 1
     }, sxIcon)
@@ -110,8 +107,7 @@ Default.propTypes = {
   timeout: _propTypes["default"].number,
   leaveDelay: _propTypes["default"].number,
   enterDelay: _propTypes["default"].number,
-  size: _propTypes["default"].number,
-  withOutAnimate: _propTypes["default"].bool
+  size: _propTypes["default"].number
 };
 Default.defaultProps = {
   caption: undefined,
@@ -125,8 +121,7 @@ Default.defaultProps = {
   timeout: 600,
   leaveDelay: 0,
   size: 19,
-  enterDelay: 1000,
-  withOutAnimate: false
+  enterDelay: 1000
 };
 var _default = Default;
 exports["default"] = _default;

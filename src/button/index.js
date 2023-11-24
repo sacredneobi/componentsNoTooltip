@@ -23,7 +23,6 @@ const MyButton = (props) => {
     iconPos,
     classNameIcon,
     sizeButton,
-    withOutAnimate,
     placement,
     leaveDelay,
     onNavigate,
@@ -34,7 +33,6 @@ const MyButton = (props) => {
     <Icon
       textIcon={textIcon}
       size={size}
-      withOutAnimate={withOutAnimate}
       sx={{
         mr: caption && caption !== "" && iconPos === "left" && 1,
         ml: caption && caption !== "" && iconPos === "right" && 1,
@@ -77,7 +75,6 @@ const MyButton = (props) => {
           loading={loading}
           textIcon=""
           size={size}
-          withOutAnimate={withOutAnimate}
           sx={{
             mr: caption && caption !== "" && 1,
             ...sxIcon,
@@ -144,7 +141,6 @@ Default.propTypes = {
   leaveDelay: PropTypes.number,
   enterDelay: PropTypes.number,
   size: PropTypes.number,
-  withOutAnimate: PropTypes.bool,
 };
 
 Default.defaultProps = {
@@ -160,7 +156,6 @@ Default.defaultProps = {
   leaveDelay: 0,
   size: 19,
   enterDelay: 1000,
-  withOutAnimate: false,
 };
 
 export default Default;
